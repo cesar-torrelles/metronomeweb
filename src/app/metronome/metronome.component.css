@@ -55,8 +55,12 @@
     border: none;
     width: 400px;
     -webkit-box-align: center;
-    
   }
 
-  
 
+  .tap_tempo{
+    color: red
+  }
+
+    
+  

@@ -1,33 +1,68 @@
 <div class="metronomo">
-  <h2>Metronomo Web</h2>
+  <h2>Metronome Web</h2>
   <div class="cuadro metronomo">
-    <div class="sc-cugefK hNDm">
-      <button id="stage-button-pomodoro" class="sc-bdVaJa sc-bwzfXH sc-fnwBNb sc-iNhVCk ddKIrH">Beat<span
-          class="sc-gbOuXE iVnkaK"></span>
-      </button>
-  
-      <button class="sc-bdVaJa sc-bwzfXH sc-fnwBNb sc-eAKXzc gCvhcJ">Tap <span class="sc-gbOuXE iVnkaK">Tempo</span>
-      </button>
-   
-      <button class="sc-bdVaJa sc-bwzfXH sc-fnwBNb sc-bfYoXt dcxsNp">Sound <span class="sc-gbOuXE iVnkaK"></span>
-      </button>
-    </div>
-    <div id="tempo" >
-      
-      <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
-      
-    </div>
-    
-  
-    <div class="sc-hUfwpO UXHiS">
-      
+
+    <div>
       <button (click)="toggleMetronome()" color="rgb(56 133 138)" title="Press spacebar to start/pause"
-        class="sc-bdVaJa sc-htpNat sc-gkFcWv jKHePo">
+        class="btn btn-primary">
         {{ metronomeRunning ? 'Pause' : 'Start' }}
       </button>
     </div>
+
+    <div id="tempo" > 
+      <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
+    </div>
+
+    <button class="btn btn-outline-primary"> Tap Tempo
+    </button>
+
+    <div class="sc-cugefK hNDm">
+      
+      <div class="dropdown">
+        <button id="stage-button-pomodoro" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Beat
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button (click)="assignBeat(4)" class="dropdown-item" type="button"> 4/4 </button>
+          <button (click)="assignBeat(3)" class="dropdown-item" type="button"> 3/4 </button>
+          <button (click)="assignBeat(2)" class="dropdown-item" type="button"> 2/4 </button>
+        </div>
+      
+  
+      
+  
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sound 1
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button (click)="assignSound1('Kick')" class="dropdown-item" type="button">kick</button>
+          <button (click)="assignSound1('Snare')" class="dropdown-item" type="button">snare</button>
+        </div>
+      
+      
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sound 2
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">kick</button>
+          <button class="dropdown-item" type="button">Snap</button>
+          <button class="dropdown-item" type="button">Bongo</button>
+        </div>
+      
+      
+    
+  
+    
   </div>
+
+  
 </div>
+
+
+
+
 
 
 

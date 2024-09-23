@@ -18,15 +18,17 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   interval: any; // Variable that saves the setInterval
   tickSound: Howl;
   tickSoundFirst: Howl;
-  denominator: number = 3;
+  nameTickSound: String = "Snap";
+  nameTickSoundFirst: String = "Bleep";
+  denominator: number = 4;
 
   constructor() {
     this.tickSound = new Howl({
-      src: ['assets/metronomeweb 2-Snap SP.mp3'],
+      src: ['assets/'+this.nameTickSound+'.mp3'],
       html5: true
     });
     this.tickSoundFirst = new Howl({
-      src: ['assets/metronomeweb 3-Bongo C78 Hi.mp3'],
+      src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
       
       html5: true 
     });
@@ -48,6 +50,20 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     }
   }
 
+  //metode that assign beat
+  assignBeat (value: number){
+    this.denominator = value;
+  }
+
+  //metode that assign sound1
+  assignSound1 (value: string){
+    this.nameTickSoundFirst = value;
+  }
+  //metode that assign sound2
+  assignSound2 (value: string){
+    this.nameTickSound = value;
+  }
+
   //metode that starts the metronome
   startMetronome() {
     let counter = 1;
@@ -61,13 +77,11 @@ export class MetronomeComponent implements OnInit, OnDestroy {
       switch(counter){
         case 1:
           this.tickSoundFirst.play();
-          console.log('TickFirst '+counter); // Ejemplo de salida a consola
           counter ++;
           break;
 
         default:
           this.tickSound.play();
-          console.log('Tick '+counter); // Ejemplo de salida a consola
           counter ++;
           break;
       }
