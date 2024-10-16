@@ -12,9 +12,17 @@
     <div id="tempo" > 
       <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
     </div>
+    <div class="tap-tempo-container"></div>
+      <button class="btn btn-outline-primary" (click)="onTap()">Tap Tempo</button>
+     <!-- <button class="btn btn-outline-primary" (click)="reset()" class="reset-button">Reset</button>  -->
+     <!-- <div [@if]="bpm !== null" >
+        BPM: {{ bpm }}
+      </div>
+    </div>-->
+   <!-- <button class="btn btn-outline-primary"> Tap Tempo
+    </button> -->
 
-    <button class="btn btn-outline-primary"> Tap Tempo
-    </button>
+    
 
     <div class="sc-cugefK hNDm">
       
