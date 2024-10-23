@@ -20,13 +20,16 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   interval: any; // Variable that saves the setInterval
   tickSound: Howl;
   tickSoundFirst: Howl;
-  nameTickSound: String = "Snap";
+  nameTickSound: String = "Bongo1";
   nameTickSoundFirst: String = "Bleep";
   denominator: number = 4;
   //tap-tempo
   private tapTimes: number[] = [];
   public bpmTap: number | null = null;
   private maxTaps: number = 5;
+
+
+ 
 
   constructor() {
     this.tickSound = new Howl({
@@ -35,10 +38,11 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     });
     this.tickSoundFirst = new Howl({
       src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
-      
       html5: true 
     });
   }
+
+
 
   //tap-tempo
   onTap() {
@@ -72,9 +76,27 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     this.tapTimes = [];
     this.bpmTap = null;
   }
-
+ //metode that assign sound1
+ assignSound1 (value: String){
+  this.nameTickSoundFirst = value;
+  this.tickSoundFirst = new Howl({
+    src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
+    html5: true 
+  });
+  
+}
+//metode that assign sound2
+assignSound2 (value: String){
+  this.nameTickSound = value;
+  this.tickSound = new Howl({
+    src: ['assets/'+this.nameTickSound+'.mp3'],
+    html5: true
+  });
+  
+}
 
   ngOnInit() {
+    
   }
 
   ngOnDestroy() {
@@ -95,14 +117,7 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     this.denominator = value;
   }
 
-  //metode that assign sound1
-  assignSound1 (value: string){
-    this.nameTickSoundFirst = value;
-  }
-  //metode that assign sound2
-  assignSound2 (value: string){
-    this.nameTickSound = value;
-  }
+  
 
   //metode that starts the metronome
   startMetronome() {
@@ -117,11 +132,13 @@ export class MetronomeComponent implements OnInit, OnDestroy {
       switch(counter){
         case 1:
           this.tickSoundFirst.play();
+          console.log(this.nameTickSoundFirst);
           counter ++;
           break;
 
         default:
           this.tickSound.play();
+          console.log(this.nameTickSound);
           counter ++;
           break;
       }
