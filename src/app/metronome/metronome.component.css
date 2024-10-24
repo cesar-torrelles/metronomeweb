@@ -9,6 +9,11 @@
     color: black;
   }
 
+  .h2 {
+    color: rgb(56, 133, 138);
+
+  }
+
   button{
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
@@ -33,10 +38,10 @@
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-weight: 300;
   -webkit-tap-highlight-color: transparent;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px 0px 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 30px 0px 30px;
   border-radius: 6px;
   margin-bottom: 20px;
   width: 100%;
@@ -48,12 +53,13 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     -webkit-tap-highlight-color: transparent;
     color: rgb(7, 249, 152);
+    background-color: rgb(0 0 0 / .001);
     text-align: center;
-    font-size: 120px;
+    font-size: 200%;
     font-weight: bold;
     margin-top: 20px;
     border: none;
-    width: 400px;
+    width: 160px;
     -webkit-box-align: center;
   }
 
@@ -61,6 +67,17 @@
   .tap_tempo{
     color: red
   }
+
+  .box1 {
+    background-color: rgb(0 0 0 / .05);
+    color: #fff;
+    margin:auto;
+    width: 400px;
+    padding: 10%;
+    border-radius: 10px;
+    
+  }
+  
 
     
   
