@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 @Component({
   selector: 'app-metronome',
   imports: [FormsModule],
@@ -13,8 +15,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 })
 
 
-
 export class MetronomeComponent implements OnInit, OnDestroy {
+  
   bpm: number = 120; // initial value of the bpm
   metronomeRunning: boolean = false;
   interval: any; // Variable that saves the setInterval

@@ -1,16 +1,53 @@
+/* Tema claro */
+:root {
+  --metronomo-color: black;
+  --controls-color: black;
+  --h2-color: rgb(56, 133, 138);
+  --button-color: rgb(56, 133, 138);
+  --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  --button-color-background: white;
+  --cuadro-metronomo-color: rgb(0, 0, 0);
+  --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
+  --tempo-color: rgb(7, 249, 152);
+  --tempo-color-background: rgb(0 0 0 / .001);
+  --taptempo-color: red;
+  --box1-color: #191818;
+  --box1-color-background: #b1b1b1;
+}
+
+/* Tema oscuro
+.dark-theme {
+  --metronomo-color: black;
+  --controls-color: black;
+  --h2-color: rgb(56, 133, 138);
+  --button-color: rgb(56, 133, 138);
+  --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  --button-color-background: white;
+  --cuadro-metronomo-color: rgb(0, 0, 0);
+  --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
+  --tempo-color: rgb(7, 249, 152);
+  --tempo-color-background: rgb(0 0 0 / .001);
+  --taptempo-color: red;
+  --box1-color: #fff;
+  --box1-color-background: #fff;
+}
+
+ */
+
+
 .metronomo {
     text-align: center;
     margin-top: 20px;
-    color: black;
+    color: var(--metronomo-color);
   }
   
   .controls {
     margin-top: 20px;
-    color: black;
+    color: var(--controls-color);
   }
 
   .h2 {
-    color: rgb(56, 133, 138);
+    color: var(--h2-color);
 
   }
 
@@ -21,14 +58,14 @@
   margin: 20px 0px 0px;
   padding: 0px 12px;
   border-radius: 4px;
-  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  box-shadow: var(--button-color-shadow);
   font-family: ArialRounded;
   font-size: 22px;
   height: 55px;
-  color: rgb(56, 133, 138);
+  color: var(--button-color);
   font-weight: bold;
   width: 200px;
-  background-color: white;
+  background-color: var(--button-color-background);
   transition: color 0.5s ease-in-out; 
   }
 
@@ -38,9 +75,9 @@
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-weight: 300;
   -webkit-tap-highlight-color: transparent;
-  color: rgb(0, 0, 0);
+  color: var(--cuadro-metronomo-color);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--cuadro-metronomo-color-background);
   padding: 30px 0px 30px;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -52,8 +89,8 @@
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     -webkit-tap-highlight-color: transparent;
-    color: rgb(7, 249, 152);
-    background-color: rgb(0 0 0 / .001);
+    color: var(--tempo-color);
+    background-color: var(--tempo-color-background);
     text-align: center;
     font-size: 200%;
     font-weight: bold;
@@ -65,12 +102,12 @@
 
 
   .tap_tempo{
-    color: red
+    color: var(--taptempo-color);
   }
 
   .box1 {
-    background-color: rgb(0 0 0 / .05);
-    color: #fff;
+    background-color: var(--box1-color-background);
+    color: var(--box1-);
     margin:auto;
     width: 400px;
     padding: 10%;

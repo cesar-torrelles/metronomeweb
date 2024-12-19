@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MetronomeComponent } from './metronome/metronome.component';
+//import {  } from './metronome/theme-switcher.component';
 
 @Component({
   selector: 'app-root',

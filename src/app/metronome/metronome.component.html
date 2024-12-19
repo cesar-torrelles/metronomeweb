@@ -1,82 +1,82 @@
-<div class="metronomo">
-  
-  <div class="cuadro metronomo">
-    <div class="box1">
-      <div>
-        <h2 class="h2">Metronome Web</h2>
-      </div>
-      
-      <div>
-        <button (click)="toggleMetronome()" color="rgb(56 133 138)" title="Press spacebar to start/pause"
-          class="btn btn-primary">
-          {{ metronomeRunning ? 'Pause' : 'Start' }}
-        </button>
-      </div>
-  
-      <div id="tempo" > 
-        <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
-      </div>
-      <div class="tap-tempo-container"></div>
-        <button class="btn btn-outline-primary" (click)="onTap()">Tap Tempo</button>
-       
-      <div class="sc-cugefK hNDm">
-        
-        <div class="dropdown">
-          <button id="stage-button-pomodoro" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Beat
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button (click)="assignBeat(4)" class="dropdown-item" type="button"> 4/4 </button>
-            <button (click)="assignBeat(3)" class="dropdown-item" type="button"> 3/4 </button>
-            <button (click)="assignBeat(2)" class="dropdown-item" type="button"> 2/4 </button>
-          </div>
-        
-  
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sound 1
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button (click)="assignSound1('Kick')" class="dropdown-item" type="button">Kick</button>
-            <button (click)="assignSound1('Snare')" class="dropdown-item" type="button">Snare</button>
-            <button (click)="assignSound1('Snap')" class="dropdown-item" type="button">Snap</button>
-            <button (click)="assignSound1('Perc_Hi')" class="dropdown-item" type="button">Perc Hi</button>
-            <button (click)="assignSound1('hihat')" class="dropdown-item" type="button">Hihat</button>
-            <button (click)="assignSound1('Bleep')" class="dropdown-item" type="button">Bleep</button>
-            <button (click)="assignSound1('Bongo1')" class="dropdown-item" type="button">Bongo1</button>
-            <button (click)="assignSound1('Bongo2')" class="dropdown-item" type="button">Bongo2</button>
-            <button (click)="assignSound1('Bongo3')" class="dropdown-item" type="button">Bongo3</button>
-            <button (click)="assignSound1('Bongo4')" class="dropdown-item" type="button">Bongo4</button>
-          </div>
-        
-        
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sound 2
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button (click)="assignSound2('Kick')" class="dropdown-item" type="button">Kick</button>
-            <button (click)="assignSound2('Snare')" class="dropdown-item" type="button">Snare</button>
-            <button (click)="assignSound2('Snap')" class="dropdown-item" type="button">Snap</button>
-            <button (click)="assignSound2('Perc_Hi')" class="dropdown-item" type="button">Perc Hi</button>
-            <button (click)="assignSound2('hihat')" class="dropdown-item" type="button">Hihat</button>
-            <button (click)="assignSound2('Bleep')" class="dropdown-item" type="button">Bleep</button>
-            <button (click)="assignSound2('Bongo1')" class="dropdown-item" type="button">Bongo1</button>
-            <button (click)="assignSound2('Bongo2')" class="dropdown-item" type="button">Bongo2</button>
-            <button (click)="assignSound2('Bongo3')" class="dropdown-item" type="button">Bongo3</button>
-            <button (click)="assignSound2('Bongo4')" class="dropdown-item" type="button">Bongo4</button>
-          </div>
+
+
+
+  <div class="metronomo">
+    <div class="cuadro metronomo">
+      <div class="box1">
+        <div>
+          <h2 class="h2">Metronome Web</h2>
         </div>
+        
+        <div>
+          <button (click)="toggleMetronome()" color="rgb(56 133 138)" title="Press spacebar to start/pause"
+            class="btn btn-primary">
+            {{ metronomeRunning ? 'Pause' : 'Start' }}
+          </button>
+        </div>
+    
+        <div id="tempo" > 
+          <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
+        </div>
+        <div class="tap-tempo-container"></div>
+          <button class="btn btn-outline-primary" (click)="onTap()">Tap Tempo</button>
+        
+        <div class="sc-cugefK hNDm">
+          
+          <div class="dropdown">
+            <button id="stage-button-pomodoro" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Beat
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button (click)="assignBeat(4)" class="dropdown-item" type="button"> 4/4 </button>
+              <button (click)="assignBeat(3)" class="dropdown-item" type="button"> 3/4 </button>
+              <button (click)="assignBeat(2)" class="dropdown-item" type="button"> 2/4 </button>
+            </div>
+          
+    
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sound 1
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button (click)="assignSound1('Kick')" class="dropdown-item" type="button">Kick</button>
+              <button (click)="assignSound1('Snare')" class="dropdown-item" type="button">Snare</button>
+              <button (click)="assignSound1('Snap')" class="dropdown-item" type="button">Snap</button>
+              <button (click)="assignSound1('Perc_Hi')" class="dropdown-item" type="button">Perc Hi</button>
+              <button (click)="assignSound1('hihat')" class="dropdown-item" type="button">Hihat</button>
+              <button (click)="assignSound1('Bleep')" class="dropdown-item" type="button">Bleep</button>
+              <button (click)="assignSound1('Bongo1')" class="dropdown-item" type="button">Bongo1</button>
+              <button (click)="assignSound1('Bongo2')" class="dropdown-item" type="button">Bongo2</button>
+              <button (click)="assignSound1('Bongo3')" class="dropdown-item" type="button">Bongo3</button>
+              <button (click)="assignSound1('Bongo4')" class="dropdown-item" type="button">Bongo4</button>
+            </div>
+          
+          
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sound 2
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button (click)="assignSound2('Kick')" class="dropdown-item" type="button">Kick</button>
+              <button (click)="assignSound2('Snare')" class="dropdown-item" type="button">Snare</button>
+              <button (click)="assignSound2('Snap')" class="dropdown-item" type="button">Snap</button>
+              <button (click)="assignSound2('Perc_Hi')" class="dropdown-item" type="button">Perc Hi</button>
+              <button (click)="assignSound2('hihat')" class="dropdown-item" type="button">Hihat</button>
+              <button (click)="assignSound2('Bleep')" class="dropdown-item" type="button">Bleep</button>
+              <button (click)="assignSound2('Bongo1')" class="dropdown-item" type="button">Bongo1</button>
+              <button (click)="assignSound2('Bongo2')" class="dropdown-item" type="button">Bongo2</button>
+              <button (click)="assignSound2('Bongo3')" class="dropdown-item" type="button">Bongo3</button>
+              <button (click)="assignSound2('Bongo4')" class="dropdown-item" type="button">Bongo4</button>
+            </div>
+          </div>
 
 
 
+        </div>
       </div>
+    
     </div>
-  
   </div>
-
-  
-</div>
 
 
 

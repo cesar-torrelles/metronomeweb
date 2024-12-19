@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+/* Tema claro */
+:root {
+    --metronomo-color: black;
+    --controls-color: black;
+    --h2-color: rgb(56, 133, 138);
+    --button-color: rgb(56, 133, 138);
+    --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    --button-color-background: white;
+    --cuadro-metronomo-color: rgb(0, 0, 0);
+    --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
+    --tempo-color: rgb(7, 249, 152);
+    --tempo-color-background: rgb(0 0 0 / .001);
+    --taptempo-color: red;
+    --box1-color: #fff;
+    --box1-color-background: #fff;
+  }
+  
+  /* Tema oscuro */
+  .dark-theme {
+    --metronomo-color: black;
+    --controls-color: black;
+    --h2-color: rgb(56, 133, 138);
+    --button-color: rgb(56, 133, 138);
+    --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    --button-color-background: white;
+    --cuadro-metronomo-color: rgb(0, 0, 0);
+    --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
+    --tempo-color: rgb(7, 249, 152);
+    --tempo-color-background: rgb(0 0 0 / .001);
+    --taptempo-color: red;
+    --box1-color: #fff;
+    --box1-color-background: #fff;
+  }
+  
+  
+  
+  
+  .metronomo {
+      text-align: center;
+      margin-top: 20px;
+      color: var(--metronomo-color);
+    }
+    
+    .controls {
+      margin-top: 20px;
+      color: var(--controls-color);
+    }
+  
+    .h2 {
+      color: var(--h2-color);
+  
+    }
+  
+    button{
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    box-shadow: var(--button-color-shadow);
+    font-family: ArialRounded;
+    font-size: 22px;
+    height: 55px;
+    color: var(--button-color);
+    font-weight: bold;
+    width: 200px;
+    background-color: var(--button-color-background);
+    transition: color 0.5s ease-in-out; 
+    }
+  
+   .cuadro_metronomo {
+    font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: 300;
+    -webkit-tap-highlight-color: transparent;
+    color: var(--cuadro-metronomo-color);
+    text-align: center;
+    background-color: var(--cuadro-metronomo-color-background);
+    padding: 30px 0px 30px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 100%;
+    }
+   
+    .tempo{
+      font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      -webkit-tap-highlight-color: transparent;
+      color: var(--tempo-color);
+      background-color: var(--tempo-color-background);
+      text-align: center;
+      font-size: 200%;
+      font-weight: bold;
+      margin-top: 20px;
+      border: none;
+      width: 160px;
+      -webkit-box-align: center;
+    }
+  
+  
+    .tap_tempo{
+      color: var(--taptempo-color);
+    }
+  
+    .box1 {
+      background-color: var(--box1-color-background);
+      color: var(--box1-color);
+      margin:auto;
+      width: 400px;
+      padding: 10%;
+      border-radius: 10px;
+      
+    }
+    
+  
+      
+    
+  
