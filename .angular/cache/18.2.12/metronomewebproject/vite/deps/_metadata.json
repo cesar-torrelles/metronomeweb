@@ -1,0 +1,52 @@
+{
+  "hash": "5a68ad48",
+  "configHash": "097e1d81",
+  "lockfileHash": "50e32026",
+  "browserHash": "06275005",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "4bf1a081",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "1fa6e525",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "6f2aa729",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "53476ce1",
+      "needsInterop": false
+    },
+    "howler": {
+      "src": "../../../../../../node_modules/howler/dist/howler.js",
+      "file": "howler.js",
+      "fileHash": "4187dfb5",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-DGKVWI2V": {
+      "file": "chunk-DGKVWI2V.js"
+    },
+    "chunk-VWDSHNHM": {
+      "file": "chunk-VWDSHNHM.js"
+    },
+    "chunk-KWYVCPYC": {
+      "file": "chunk-KWYVCPYC.js"
+    },
+    "chunk-3OV72XIM": {
+      "file": "chunk-3OV72XIM.js"
+    }
+  }
+}
