@@ -48,6 +48,7 @@ export class MetronomeComponent implements OnInit, OnDestroy {
 
   //tap-tempo
   onTap() {
+    console.log("onTap Activated");
     const currentTime = Date.now();
     this.tapTimes.push(currentTime);
 
@@ -107,6 +108,7 @@ assignSound2 (value: String){
 
   //metode for the play/stop button
   toggleMetronome() {
+    console.log("toggleMetronome activated");
     if (this.metronomeRunning) {
       this.stopMetronome();
     } else {
