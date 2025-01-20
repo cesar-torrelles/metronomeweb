@@ -35,10 +35,14 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   constructor() {
     this.tickSound = new Howl({
       src: ['assets/'+this.nameTickSound+'.mp3'],
+      preload: true,
+      volume: 1.0,
       html5: true
     });
     this.tickSoundFirst = new Howl({
       src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
+      preload: true,
+      volume: 1.0,
       html5: true 
     });
   }
@@ -83,6 +87,8 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   this.nameTickSoundFirst = value;
   this.tickSoundFirst = new Howl({
     src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
+    volume: 1.0,
+    preload: true,
     html5: true 
   });
   
@@ -92,6 +98,8 @@ assignSound2 (value: String){
   this.nameTickSound = value;
   this.tickSound = new Howl({
     src: ['assets/'+this.nameTickSound+'.mp3'],
+    preload: true,
+    volume: 1.0,
     html5: true
   });
   
