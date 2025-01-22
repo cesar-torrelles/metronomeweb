@@ -47,7 +47,15 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  onKeyPress(event: KeyboardEvent): void {
+    const inputChar = event.key;
+    const currentValue = (event.target as HTMLInputElement).value;
 
+    // Permitir solo números y un máximo de 3 cifras
+    if (!/^\d$/.test(inputChar) || currentValue.length >= 3) {
+      event.preventDefault(); // Bloquea la entrada
+    }
+  }
 
   //tap-tempo
   onTap() {

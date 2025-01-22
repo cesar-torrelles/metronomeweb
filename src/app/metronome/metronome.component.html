@@ -20,7 +20,7 @@
 
     <div class="row">
       <div id="tempo" class="col-sm">
-        <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning">
+        <input class="tempo" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning" maxlength="3" (keypress)="onKeyPress($event)">
       </div>
     </div>
 
