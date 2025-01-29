@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MetronomeComponent } from './metronome.component';
+import { MetronomeComponent } from './MetronomeComponent';
 
 
 describe('MetronomeComponent', () => {

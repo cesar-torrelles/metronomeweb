@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MetronomeComponent } from './metronome/metronome.component';
+import { MetronomeComponent } from './metronome/MetronomeComponent';
 //import {  } from './metronome/theme-switcher.component';
 
 @Component({

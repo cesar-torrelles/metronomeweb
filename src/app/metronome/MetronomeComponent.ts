@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Howl } from 'howler';
-import { FormsModule } from '@angular/forms';  
+
 
 
 
@@ -8,32 +9,19 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-metronome',
   imports: [FormsModule],
-  standalone: true,  
+  standalone: true,
   templateUrl: './metronome.component.html',
   styleUrls: ['./metronome.component.css']
 })
 
 
 export class MetronomeComponent implements OnInit, OnDestroy {
-  
+
   bpm: number = 120; // initial value of the bpm
   metronomeRunning: boolean = false;
   interval: any; // Variable that saves the setInterval
-  tickSound = new Howl ({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true });
-  tickSoundFirst = new Howl ({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true });
-  soundsArray = [
-    new Howl ({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Bongo2.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Bongo3.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Bongo4.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/hihat.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Kick.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Perc_Hi.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Snap.mp3'], preload: true, volume: 1.0, html5: true }),
-    new Howl ({ src: ['assets/Snare.mp3'], preload: true, volume: 1.0, html5: true }),
-  ];
-  
+  tickSoundFirst = new Howl({ src: ['assets/Kick.ogg'], preload: true, volume: 1.0, html5: true });
+  tickSound = new Howl({ src: ['assets/Bongo1.ogg'], preload: true, volume: 1.0, html5: true });
   numberTickSound: number = 1;
   numberTickSoundFirst: number = 0;
   denominator: number = 4;
@@ -41,31 +29,21 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   private tapTimes: number[] = [];
   public bpmTap: number | null = null;
   private maxTaps: number = 5;
+  soundsArray = [
+    //new Howl({ src: ['assets/Bleep.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo1.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo2.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo3.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo4.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/hihat.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Kick.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Perc_Hi.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Snap.ogg'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Snare.ogg'], preload: true, volume: 1.0, html5: true }),
+  ];
 
-   //const sounds: Map<string, Howl> = new Map();
-    
-
-    
- 
-
+  //const sounds: Map<string, Howl> = new Map();
   constructor() {
-
-    
-    //this.tickSound = new Howl ({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true });
-   // this.tickSoundFirst = new Howl ({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true });
-  
-  /*  this.tickSoundFirst = new Howl({
-      src: ['assets/'+this.nameTickSoundFirst+'.mp3'],
-      preload: true,
-      volume: 1.0,
-      html5: true 
-    });
-
-*/
-
-    
-    
-    
     
   }
 
@@ -81,7 +59,7 @@ export class MetronomeComponent implements OnInit, OnDestroy {
 
   //tap-tempo
   onTap() {
-    
+
     const currentTime = Date.now();
     this.tapTimes.push(currentTime);
 
@@ -112,24 +90,23 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     this.tapTimes = [];
     this.bpmTap = null;
   }
- //metode that assign sound1
- assignSound1 (value: number){
-  this.numberTickSoundFirst = value;
-  this.tickSoundFirst = this.soundsArray[this.numberTickSoundFirst];
-  
-  
-  
-  
-}
-//metode that assign sound2
-assignSound2 (value: number){
-  this.numberTickSound = value;
-  this.tickSound = this.soundsArray[this.numberTickSound];
-  
-}
+  //metode that assign sound1
+  assignSound1(value: number) {
+    this.numberTickSoundFirst = value;
+    this.tickSoundFirst = this.soundsArray[this.numberTickSoundFirst];
+
+
+
+
+  }
+  //metode that assign sound2
+  assignSound2(value: number) {
+    this.numberTickSound = value;
+    this.tickSound = this.soundsArray[this.numberTickSound];
+
+  }
 
   ngOnInit() {
-    
   }
 
   ngOnDestroy() {
@@ -138,7 +115,7 @@ assignSound2 (value: number){
 
   //metode for the play/stop button
   toggleMetronome() {
-    
+
     if (this.metronomeRunning) {
       this.stopMetronome();
     } else {
@@ -147,11 +124,11 @@ assignSound2 (value: number){
   }
 
   //metode that assign beat
-  assignBeat (value: number){
+  assignBeat(value: number) {
     this.denominator = value;
   }
 
-  
+
 
   //metode that starts the metronome
   startMetronome() {
@@ -159,21 +136,21 @@ assignSound2 (value: number){
     const intervalMs = (60 / this.bpm) * 1000;
     this.interval = setInterval(() => {
 
-      if (counter >this.denominator){
+      if (counter > this.denominator) {
         counter = 1;
       }
       // execute a sound every interval
-      switch(counter){
+      switch (counter) {
         case 1:
           this.tickSoundFirst.play();
-          
-          counter ++;
+
+          counter++;
           break;
 
         default:
           this.tickSound.play();
-         
-          counter ++;
+
+          counter++;
           break;
       }
     }, intervalMs);
@@ -187,4 +164,3 @@ assignSound2 (value: number){
     this.metronomeRunning = false;
   }
 }
-
