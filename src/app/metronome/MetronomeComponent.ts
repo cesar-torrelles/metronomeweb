@@ -20,8 +20,8 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   bpm: number = 120; // initial value of the bpm
   metronomeRunning: boolean = false;
   interval: any; // Variable that saves the setInterval
-  tickSoundFirst = new Howl({ src: ['assets/Kick.ogg'], preload: true, volume: 1.0, html5: true });
-  tickSound = new Howl({ src: ['assets/Bongo1.ogg'], preload: true, volume: 1.0, html5: true });
+  tickSoundFirst = new Howl({ src: ['assets/Kick.mp3'], preload: true, volume: 1.0, html5: true });
+  tickSound = new Howl({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true });
   numberTickSound: number = 1;
   numberTickSoundFirst: number = 0;
   denominator: number = 4;
@@ -30,16 +30,16 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   public bpmTap: number | null = null;
   private maxTaps: number = 5;
   soundsArray = [
-    //new Howl({ src: ['assets/Bleep.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Bongo1.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Bongo2.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Bongo3.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Bongo4.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/hihat.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Kick.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Perc_Hi.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Snap.ogg'], preload: true, volume: 1.0, html5: true }),
-    new Howl({ src: ['assets/Snare.ogg'], preload: true, volume: 1.0, html5: true }),
+    //new Howl({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo2.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo3.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bongo4.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/hihat.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Kick.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Perc_Hi.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Snap.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Snare.mp3'], preload: true, volume: 1.0, html5: true }),
   ];
 
   //const sounds: Map<string, Howl> = new Map();
