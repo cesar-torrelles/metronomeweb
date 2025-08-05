@@ -2,7 +2,7 @@
 
   <div class="plugin-container">
     <h2 class="plugin-title">Metronome Web</h2>
-<!--
+
     <div id="bpm-knob-container">
       <label for="bpm-knob">BPM</label>
       <div id="bpm-knob"></div>
@@ -10,14 +10,14 @@
          <input class="bpm-value" type="number" [(ngModel)]="bpm" [disabled]="metronomeRunning" maxlength="3" (keypress)="onKeyPress($event)">
       </div>
     </div>
-  -->
+  
 
     <div class="controls">
       <button class="vintage-button" (click)="toggleMetronome()" title="start/pause">{{ metronomeRunning ? 'Pause' :
           'Start' }}
       </button>
 
-      <!--
+      
       <button class="vintage-button" (click)="onTap()">Tap Tempo</button>
      
     </div>
@@ -35,7 +35,7 @@
 
       <div class="selector-group">
         <label>Sound 1:</label>
-        <select #soundSelect1 (change)="assignSound1(soundSelect1.value)">
+        <select #soundSelect1 (change)="loadClickSound1(soundSelect1.value)">
           <option value="0">Bleep</option>
           <option value="1">Bongo1</option>
           <option value="2">Bongo2</option>
@@ -49,10 +49,10 @@
         </select>
       </div>
       
-
+      
       <div class="selector-group">
         <label>Sound 2:</label>
-        <select #soundSelect2 (change)="assignSound2(soundSelect2.value)">
+        <select #soundSelect2 (change)="loadClickSound2(soundSelect2.value)">
           <option value="1">Bongo1</option>
           <option value="0">Bleep</option>
           <option value="2">Bongo2</option>
@@ -66,5 +66,5 @@
         </select>
       </div>
     </div>
-    -->
+  
   </div>
