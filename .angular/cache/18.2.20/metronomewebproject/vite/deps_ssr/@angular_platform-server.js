@@ -7,7 +7,7 @@ import {
   EventManagerPlugin,
   HTTP_ROOT_INTERCEPTOR_FNS,
   HttpClientModule
-} from "./chunk-O2K6NUWL.js";
+} from "./chunk-I5SVBKD4.js";
 import {
   DOCUMENT,
   NullViewportScroller,
@@ -17,7 +17,7 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
-} from "./chunk-D3JV2RY4.js";
+} from "./chunk-ANSPOGUZ.js";
 import {
   ALLOW_MULTIPLE_PLATFORMS,
   ANIMATION_MODULE_TYPE,
