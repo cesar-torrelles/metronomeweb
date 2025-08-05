@@ -20,9 +20,9 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   bpm: number = 120; // initial value of the bpm
   metronomeRunning: boolean = false;
   interval: any; // Variable that saves the setInterval
-  tickSoundFirst = new Howl({ src: ['assets/Kick.mp3'], preload: true, volume: 1.0, html5: true });
+  tickSoundFirst = new Howl({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true });
   tickSound = new Howl({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true });
-  numberTickSound: number = 1;
+  numberTickSound: number = 0;
   numberTickSoundFirst: number = 0;
   denominator: number = 4;
   //tap-tempo
@@ -31,6 +31,7 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   private maxTaps: number = 5;
   soundsArray = [
     //new Howl({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true }),
+    new Howl({ src: ['assets/Bleep.mp3'], preload: true, volume: 1.0, html5: true }),
     new Howl({ src: ['assets/Bongo1.mp3'], preload: true, volume: 1.0, html5: true }),
     new Howl({ src: ['assets/Bongo2.mp3'], preload: true, volume: 1.0, html5: true }),
     new Howl({ src: ['assets/Bongo3.mp3'], preload: true, volume: 1.0, html5: true }),
@@ -91,8 +92,10 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     this.bpmTap = null;
   }
   //metode that assign sound1
-  assignSound1(value: number) {
-    this.numberTickSoundFirst = value;
+  assignSound1(value: string) {
+    console.log(value);
+    const parsedValue = parseInt(value, 10);
+    this.numberTickSoundFirst = parsedValue;
     this.tickSoundFirst = this.soundsArray[this.numberTickSoundFirst];
 
 
@@ -100,8 +103,10 @@ export class MetronomeComponent implements OnInit, OnDestroy {
 
   }
   //metode that assign sound2
-  assignSound2(value: number) {
-    this.numberTickSound = value;
+  assignSound2(value: string) {
+    console.log(value);
+    const parsedValue = parseInt(value, 10);
+    this.numberTickSound = parsedValue;
     this.tickSound = this.soundsArray[this.numberTickSound];
 
   }
@@ -124,8 +129,9 @@ export class MetronomeComponent implements OnInit, OnDestroy {
   }
 
   //metode that assign beat
-  assignBeat(value: number) {
-    this.denominator = value;
+  assignBeat(value: string) {
+    const parsedValue = parseInt(value, 10);
+    this.denominator = parsedValue;
   }
 
 

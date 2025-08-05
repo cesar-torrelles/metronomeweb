@@ -1,143 +1,104 @@
-/* Tema claro */
-:root {
-  --metronomo-color: black;
-  --controls-color: black;
-  --h2-color: rgb(0, 0, 0);
-  --button-color: rgb(56, 133, 138);
-  --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
-  --button-color-background: white;
-  --cuadro-metronomo-color: rgb(0, 0, 0);
-  --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
-  --tempo-color: rgb(7, 249, 152);
-  --tempo-color-background: rgb(0 0 0 / .001);
-  --taptempo-color: red;
-  --box1-color: #191818;
-  --box1-color-background: #b1b1b1;
+body {
+  background-color: #1a1a1a;
+  color: #e5e0d8;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.container.text-center {
-  background: rgba(56, 133, 138, 0.9);
-  padding: 30px 0px 30px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  width: 100%;
-  
- 
-  
+.plugin-container {
+  background-color: #2b2a29;
+  border: 2px solid #444;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  width: 420px;
 }
 
-.divh2{
-  background: rgb(255, 255, 255,0.3);
-  padding: 10px 0px 10px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.h2 {
-  color: white;
-
-}
-
-/* Tema oscuro
-.dark-theme {
-  --metronomo-color: black;
-  --controls-color: black;
-  --h2-color: rgb(56, 133, 138);
-  --button-color: rgb(56, 133, 138);
-  --button-color-shadow: rgb(235, 235, 235) 0px 6px 0px;
-  --button-color-background: white;
-  --cuadro-metronomo-color: rgb(0, 0, 0);
-  --cuadro-metronomo-color-background: rgba(0, 0, 0, 0.1);
-  --tempo-color: rgb(7, 249, 152);
-  --tempo-color-background: rgb(0 0 0 / .001);
-  --taptempo-color: red;
-  --box1-color: #fff;
-  --box1-color-background: #fff;
-}
-
- */
-
-
-.metronomo {
-    text-align: center;
-    margin-top: 20px;
-    color: var(--metronomo-color);
-  }
-  
-  .controls {
-    margin-top: 20px;
-    color: var(--controls-color);
-  }
-
-  
-
-  button{
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  border: none;
-  margin: 20px 0px 0px;
-  padding: 0px 12px;
-  border-radius: 4px;
-  box-shadow: var(--button-color-shadow);
-  font-family: ArialRounded;
-  font-size: 22px;
-  height: 55px;
-  color: var(--button-color);
-  font-weight: bold;
-  width: 200px;
-  background-color: var(--button-color-background);
-  transition: color 0.5s ease-in-out; 
-  pointer-events: auto;
-  touch-action: manipulation;
-  }
-
- .cuadro_metronomo {
-  font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont,
-  'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-weight: 300;
-  -webkit-tap-highlight-color: transparent;
-  color: var(--cuadro-metronomo-color);
+.plugin-title {
   text-align: center;
-  background-color: var(--cuadro-metronomo-color-background);
-  padding: 30px 0px 30px;
-  border-radius: 6px;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  color: #e8d8b5;
+  letter-spacing: 1px;
+}
+
+#bpm-knob-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#bpm-knob label {
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+#bpm-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 0 auto;
+  color: #ffcd6d;
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+  width: 10px;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.plugin-container {
+  text-align: center;
+}
+
+.vintage-button {
+  background-color: #3b3a38;
+  border: 2px solid #5f5c58;
+  color: #f0eada;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+  box-shadow: inset 0 0 5px #111;
+}
+
+.vintage-button:hover {
+  background-color: #504e4a;
+  cursor: pointer;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.selectors {
+  margin-top: 10px;
+}
+
+.selector-group {
   margin-bottom: 20px;
+}
+
+.selector-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85em;
+  color: #d0c8b8;
+}
+
+.selector-group select {
   width: 100%;
-  }
- 
-  .tempo{
-    font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    -webkit-tap-highlight-color: transparent;
-    color: var(--tempo-color);
-    background-color: var(--tempo-color-background);
-    text-align: center;
-    font-size: 200%;
-    font-weight: bold;
-    margin-top: 20px;
-    border: none;
-    width: 160px;
-    -webkit-box-align: center;
-  }
-
-
-  .tap_tempo{
-    color: var(--taptempo-color);
-  }
-
-  .box1 {
-    background-color: var(--box1-color-background);
-    color: var(--box1-);
-    margin:auto;
-    width: 400px;
-    padding: 10%;
-    border-radius: 10px;
-    
-  }
-  
-
-    
-  
+  padding: 10px;
+  background-color: #2a2927;
+  color: #e5e0d8;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-size: 1em;
+  appearance: none;
+}

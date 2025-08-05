@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-tap-tempo',
   templateUrl: './tap-tempo.component.html',
   standalone: true,  // Especifica que es un componente standalone
-  styleUrls: ['./tap-tempo.component.css']
+  // styleUrls: ['./tap-tempo.component.css']
 })
 
 export class TapTempoComponent {
