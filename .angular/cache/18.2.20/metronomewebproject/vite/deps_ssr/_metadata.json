@@ -1,53 +1,62 @@
 {
-  "hash": "1125cb64",
-  "configHash": "378a7c2f",
+  "hash": "f0340a7f",
+  "configHash": "b77fa522",
   "lockfileHash": "ab378be7",
-  "browserHash": "6823504b",
+  "browserHash": "ed67369b",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "938edefc",
+      "fileHash": "6cb1251c",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "02118268",
+      "fileHash": "3041c539",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "9c3f9e39",
+      "fileHash": "94ff5fde",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "37a372f1",
+      "fileHash": "054eb93e",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "fb274d56",
+      "fileHash": "9803199f",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "6b412259",
+      "fileHash": "d9ca18d8",
       "needsInterop": false
     },
     "howler": {
       "src": "../../../../../../node_modules/howler/dist/howler.js",
       "file": "howler.js",
-      "fileHash": "1f5db06f",
+      "fileHash": "30906358",
       "needsInterop": true
+    },
+    "tslib": {
+      "src": "../../../../../../node_modules/tslib/tslib.es6.mjs",
+      "file": "tslib.js",
+      "fileHash": "3cf8082c",
+      "needsInterop": false
     }
   },
   "chunks": {
+    "xhr2-ISERFGGE": {
+      "file": "xhr2-ISERFGGE.js"
+    },
     "chunk-O2K6NUWL": {
       "file": "chunk-O2K6NUWL.js"
     },
@@ -56,9 +65,6 @@
     },
     "chunk-NCYSEW5N": {
       "file": "chunk-NCYSEW5N.js"
-    },
-    "xhr2-ISERFGGE": {
-      "file": "xhr2-ISERFGGE.js"
     },
     "chunk-NQ4HTGF6": {
       "file": "chunk-NQ4HTGF6.js"
