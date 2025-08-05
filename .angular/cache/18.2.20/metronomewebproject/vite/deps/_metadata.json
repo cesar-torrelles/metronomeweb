@@ -1,52 +1,49 @@
 {
-  "hash": "f8f7f900",
-  "configHash": "f06b4f6f",
+  "hash": "ff34a45c",
+  "configHash": "3a8bf8c0",
   "lockfileHash": "ab378be7",
-  "browserHash": "02c507dd",
+  "browserHash": "81d6d2d2",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "e8c0daf7",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "45b32a1d",
+      "fileHash": "479efb9d",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "1b764cd6",
+      "fileHash": "8282bf6f",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "c916c8d8",
+      "fileHash": "ed6394d8",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "389c333e",
+      "fileHash": "5c9947ec",
       "needsInterop": false
-    },
-    "howler": {
-      "src": "../../../../../../node_modules/howler/dist/howler.js",
-      "file": "howler.js",
-      "fileHash": "8f6797d3",
-      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-57XZEMP6": {
-      "file": "chunk-57XZEMP6.js"
+    "chunk-MZZXBFNQ": {
+      "file": "chunk-MZZXBFNQ.js"
     },
-    "chunk-BEVCGF3H": {
-      "file": "chunk-BEVCGF3H.js"
+    "chunk-LJGW4UUE": {
+      "file": "chunk-LJGW4UUE.js"
     },
-    "chunk-MMHIYKTQ": {
-      "file": "chunk-MMHIYKTQ.js"
-    },
-    "chunk-3OV72XIM": {
-      "file": "chunk-3OV72XIM.js"
+    "chunk-VKUFYADX": {
+      "file": "chunk-VKUFYADX.js"
     }
   }
 }

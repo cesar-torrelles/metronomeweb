@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+/*import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Howl } from 'howler';
 
@@ -170,3 +170,4 @@ export class MetronomeComponent implements OnInit, OnDestroy {
     this.metronomeRunning = false;
   }
 }
+*/
