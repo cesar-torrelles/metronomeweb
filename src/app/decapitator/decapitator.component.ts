@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+/*import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { DecapitatorController } from './decapitatorController';
 
@@ -29,3 +29,4 @@ export class DecapitatorComponent implements AfterViewInit {
     this.controller?.setParameter(param, value);
   }
 }
+*/
